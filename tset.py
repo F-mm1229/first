@@ -1,13 +1,130 @@
 import random
 
-omikuzi = [
-            "あ"   if i < 2 else
-            "中吉"   if 2 <= i < 10 else
-            "小吉"   if 10 <= i < 20 else
-            "吉"     if 20 <= i < 40 else
-            "末吉"   if 40 <= i < 50 else
-            "凶"     if 50 <= i < 55 else
-            "中凶"   if 55 <= i < 59 else
-            "大凶"   for i in range(61)]
+reason_s = [
+            "体温"   if i == 1 else
+            "地球"   if i == 2 else
+            "厚生労働省"   if i == 3 else
+            "校長先生"     if i == 4 else
+            "隣の住人"   if i == 5 else
+            "ドラえもん"     if i == 6 else
+            "メガネ"   if i == 7 else
+            "ミジンコ" if i == 8 else
+            "友達" if i == 9 else
+            "机" if i == 10 else
+            "iphone20" if i == 11 else
+            "ポチ" if i == 12 else
+            "本能" if i == 13 else
+            "ツイッターの住民" if i == 14 else
+            "Tiktoker" if i == 15 else
+            "上腕二頭筋" if i == 16 else
+            "友達の彼女" if i == 17 else
+            "拳" if i == 18 else
+            "チャンネル登録者数34人のYouTuber" if i == 19 else
+            "人" if i == 20 else
+            "カエル" if i == 21 else
+            "アヒル" if i == 22 else
+            "さる" if i == 23 else
+            "ひつじ" if i == 24 else
+            "うま" if i == 25 else
+            "犬" if i == 26 else
+            "ネコ" if i == 27 else
+            "グッピー" if i == 28 else
+            "ユニコーン" if i == 29 else
+            "とら" if i == 30 else
+            "ママ" if i == 31 else
+            "おばあちゃん" if i == 32 else
+            "僕" if i == 33 else
+            "俺" if i == 34 else
+            "くま" if i == 35 else
+            "ボウリング場" if i == 36 else
+            "カメ" if i == 37 else
+            "隣の家のおじいちゃん" if i == 38 else
+            "サボテン" if i == 39 else
+            "天気" if i == 40 else
+            "サメ" if i == 41 else
+            "昨日の努力" if i == 42 else
+            "明日の気力" if i == 43 else
+            "今日の体力" if i == 44 else
+            "うし" if i == 45 else
+            "足の小指" if i == 46 else
+            "右腕" if i == 47 else
+            "大学" if i == 48 else
+            "シャーペン" if i == 49 else
+            "フライパン" if i == 50 else
+            "ドーナツ" if i == 51 else
+            "お金" if i == 52 else
+            "あさり" if i == 53 else
+            "宿題" if i == 54 else
+            "一人でパーティー開けしたポテチ" if i == 55 else
+            "自転車" if i == 56 else
+            "花" if i == 57 else
+            "プレゼント" if i == 58 else
+            "すりごま" if i == 59 else
+            "ダイエット計画" if i == 60 else
+            "深夜テンション" if i == 61 else
+            "お鍋の中の白菜" if i == 62 else
+            "ピーマン" if i == 63 else
+            "コーヒー" if i == 64 else
+            "オレンジジュース" if i == 65 else
+            "新幹線" if i == 66 else
+            "ハッカソン" if i == 67 else
+            "まつぼっくり" if i == 68 else
+            "枝豆の皮" if i == 69 else
+            "アイスの棒" if i == 70 else
+            "恐竜の卵" if i == 71 else
+            "カルピス" if i == 72 else
+            "東京特許許可局" if i == 73 else
+            "緊急事態宣言" if i == 74 else
+            "溶けかけの雪だるま" if i == 75 else
+            "チャラチャラのパーハン" if i == 76 else
+            "トンボ" if i == 77 else
+            "沖縄の翁" if i == 78 else
+            "世界の裏側に住む住人" if i == 79 else
+            "納豆かけご飯" if i == 80 else
+            "さんまの塩焼き" if i == 81 else
+            "絶体絶命のピンチに駆けつけた主人公のライバル" if i == 82 else
+            "サッカーに命をささげた少年" if i == 83 else
+            "銀河一強いテコンドー上級者" if i == 84 else
+            "サウスポーのポチ" if i == 85 else
+            "バナナの皮" if i == 86 else
+            "リンゴ" if i == 87 else
+            "きのこ" if i == 88 else
+            "カリカリ梅" if i == 89 else
+            "赤ちゃん" if i == 90 else
+            "転んだだるまさん" if i == 91 else
+            "取引先" if i == 92 else
+            "近くの川" if i == 93 else
+            "食パンみたいなコーギー" if i == 94 else
+            "美女" if i == 95 else
+            "バイト" if i == 96 else
+            "僕の位置情報" if i == 97 else
+            "秋の風" if i == 98 else
+            "ペンギン" if i == 99 else
+            "今後のスケジュール" if i == 100 else
+            "5G" if i == 101 else
+            "台風" if i == 102 else
+            "竹取の翁" if i == 103 else
+            "主語"   for i in range(104)]
 
-print(random.choice(omikuzi) + "だよ！")
+reason_v = [
+            "壊れた"   if i == 1 else
+            "足りない"   if i == 2 else
+            "面白い"   if i == 3 else
+            "はみ出した"     if i == 4 else
+            "消えた"   if i == 5 else
+            "かわいい"     if i == 6 else
+            "怖い"   if i == 7 else
+            "飛び出してきた" if i == 8 else
+            "降ってきた" if i == 9 else
+            "おいしそうな" if i == 10 else
+            "元気すぎる" if i == 11 else
+            "生まれたらしい" if i == 12 else
+            "香ばしい" if i == 13 else
+            "少なくなった" if i == 14 else
+            "限界な" if i == 15 else
+            "美しい" if i == 16 else
+            "燃えている" if i == 17 else
+            "楽しい"   for i in range(18)]
+
+
+print(random.choice(reason_s) + "が" + random.choice(reason_v) + "ので、できません")
